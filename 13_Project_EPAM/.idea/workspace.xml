@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db194fe2-8f17-4364-9dfd-e317a19db55c" name="Default Changelist" comment="" />
+    <list default="true" id="db194fe2-8f17-4364-9dfd-e317a19db55c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/13_Project_EPAM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/13_Project_EPAM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/13_Project_EPAM/META-INF/13_Project_EPAM.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/administrators.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/administrators.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/clients.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/clients.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/inputs/admin/HotelRoomAddingUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/inputs/admin/HotelRoomAddingUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/inputs/admin/RequestSelectingUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/inputs/admin/RequestSelectingUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/inputs/common/AgeEnteringUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/inputs/common/AgeEnteringUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/inputs/common/FirstNameEnteringUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/inputs/common/FirstNameEnteringUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/inputs/common/LoginEnteringUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/inputs/common/LoginEnteringUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/inputs/common/PasswordEnteringUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/inputs/common/PasswordEnteringUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/inputs/common/SecondnameEnteringUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/inputs/common/SecondnameEnteringUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/inputs/request/ComfortLvlEnteringUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/inputs/request/ComfortLvlEnteringUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/inputs/request/RequiredDaysEnteringUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/inputs/request/RequiredDaysEnteringUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/inputs/request/RoomsAmountEnteringUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/inputs/request/RoomsAmountEnteringUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/menues/admin/AdministratorMenuOutputUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/menues/admin/AdministratorMenuOutputUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/menues/admin/AdministratorMenuUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/menues/admin/AdministratorMenuUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/menues/client/ClientMenuOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/menues/client/ClientMenuOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/menues/client/ClientMenuUi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/menues/client/ClientMenuUi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/menues/menu/CommonMenuSelectingUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/menues/menu/CommonMenuSelectingUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/menues/menu/CommonMenuUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/menues/menu/CommonMenuUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/roles/RoleCheckingUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/roles/RoleCheckingUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/roles/RoleEnteringUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/roles/RoleEnteringUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/AdministratorsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/AdministratorsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/ClientsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ClientsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/RequestsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/RequestsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/RoomsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/RoomsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/admin/AdministratorLoginCheckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/admin/AdministratorLoginCheckService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/admin/AdministratorMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/admin/AdministratorMenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/admin/AdministratorRegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/admin/AdministratorRegistrationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/admin/CheckRequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/admin/CheckRequestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/client/ClientLoginCheckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/client/ClientLoginCheckService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/client/ClientMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/client/ClientMenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/client/ClientRegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/client/ClientRegistrationService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +52,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1ZXGpFpl14CtQxWCktesvrBps2J" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -23,13 +64,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/jackson-databind-2.10.3.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -47,7 +89,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Page" />
+        <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
   </component>
@@ -64,6 +106,10 @@
       <workItem from="1584978213112" duration="6201000" />
       <workItem from="1585052538675" duration="39992000" />
       <workItem from="1585206811634" duration="22642000" />
+      <workItem from="1585563156059" duration="3133000" />
+      <workItem from="1585741286596" duration="361000" />
+      <workItem from="1585741896246" duration="1088000" />
+      <workItem from="1585743685111" duration="1886000" />
     </task>
     <servers />
   </component>
@@ -91,30 +137,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585232431315" />
-    <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1585211355494">
+    <state x="714" y="235" key="DetectedRootsChooserDialog" timestamp="1585741517738">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585211355494" />
-    <state width="1877" height="259" key="GridCell.Tab.0.bottom" timestamp="1585236936107">
+    <state x="714" y="235" key="DetectedRootsChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585741517738" />
+    <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1585743664670">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="259" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585236936107" />
-    <state width="1877" height="259" key="GridCell.Tab.0.center" timestamp="1585236936107">
+    <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585743664670" />
+    <state width="1877" height="259" key="GridCell.Tab.0.bottom" timestamp="1585745572385">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="259" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585236936107" />
-    <state width="1877" height="259" key="GridCell.Tab.0.left" timestamp="1585236936107">
+    <state width="1877" height="259" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585745572385" />
+    <state width="1877" height="259" key="GridCell.Tab.0.center" timestamp="1585745572384">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="259" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585236936107" />
-    <state width="1877" height="259" key="GridCell.Tab.0.right" timestamp="1585236936107">
+    <state width="1877" height="259" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585745572384" />
+    <state width="1877" height="259" key="GridCell.Tab.0.left" timestamp="1585745572384">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="259" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585236936107" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1584980756002">
+    <state width="1877" height="259" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585745572384" />
+    <state width="1877" height="259" key="GridCell.Tab.0.right" timestamp="1585745572384">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584980756002" />
+    <state width="1877" height="259" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585745572384" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1585741526852">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585741526852" />
     <state x="92" y="92" width="1736" height="856" key="dock-window-1" timestamp="1585143952411">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -123,9 +173,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585229486407" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585216025111">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585745244162">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585216025111" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585745244162" />
   </component>
 </project>

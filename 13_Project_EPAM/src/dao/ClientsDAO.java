@@ -3,6 +3,8 @@ package dao;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import domain.Client;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,7 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ClientsDAO{
-    public static void clientAdding(Client c1) throws IOException {
+
+    final static Logger log = LogManager.getLogger(ClientsDAO.class);
+
+    public void clientAdding(Client c1) throws IOException {
         List<Client> clients = clientReading();
         int ind = 0;
         for(int i = 0; i < clients.size(); i++){
@@ -25,17 +30,20 @@ public class ClientsDAO{
             clients.add(c1);
         }
         clientRewriting(clients);
+        log.info("Client was added.");
     }
 
-    public static List clientReading() throws IOException {
+    public List clientReading() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         List<Client> clients = new ArrayList<>();
         clients =  mapper.readValue(new File("resources\\clients.json"),  new TypeReference<List<Client>>(){});
+        log.info("Clients was obtained.");
         return clients;
     }
 
-    public static void clientRewriting(List<Client> clients) throws IOException {
+    public void clientRewriting(List<Client> clients) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
         mapper.writeValue(new File("resources\\clients.json"), clients);
+        log.info("Clients was changed.");
     }
 }
