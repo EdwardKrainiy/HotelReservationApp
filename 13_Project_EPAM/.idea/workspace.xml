@@ -1,11 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db194fe2-8f17-4364-9dfd-e317a19db55c" name="Default Changelist" comment="" />
+    <list default="true" id="db194fe2-8f17-4364-9dfd-e317a19db55c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/13_Project_EPAM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/13_Project_EPAM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/AdministratorsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/AdministratorsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/ClientsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ClientsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/RequestsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/RequestsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/RoomsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/RoomsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/domain/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/admin/AdministratorRegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/admin/AdministratorRegistrationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/admin/CheckRequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/admin/CheckRequestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/client/ClientMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/client/ClientMenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/client/ClientRegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/client/ClientRegistrationService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Hotel@localhost [2]" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Hotel@localhost [2]" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Hotel@localhost [2]" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="hotel: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ExecutionTargetDialog">
+    <checked>
+      <node key="12b15b4c-9051-4608-b401-d874171e1ef0" />
+    </checked>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="13_Project_EPAM" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -26,15 +77,24 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/mysql-connector-java-8.0.19.jar!/" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Proga\Git Repository\BI_Repository\13_Project_EPAM\resources" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -74,6 +134,9 @@
       <workItem from="1585741896246" duration="1088000" />
       <workItem from="1585743685111" duration="1886000" />
       <workItem from="1585769258011" duration="274000" />
+      <workItem from="1587029396449" duration="10750000" />
+      <workItem from="1587571808342" duration="11128000" />
+      <workItem from="1587630246347" duration="9876000" />
     </task>
     <servers />
   </component>
@@ -81,18 +144,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584980493893">
+    <state x="552" y="178" key="#SQL_Dialects" timestamp="1587575376038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584980493893" />
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1585214055986">
+    <state x="552" y="178" key="#SQL_Dialects/0.0.1920.1040@0.0.1920.1040" timestamp="1587575376038" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587633234622">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585214055986" />
-    <state x="756" y="405" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1585234987076">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587633234622" />
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1587630896224">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="756" y="405" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1585234987076" />
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587630896224" />
+    <state x="756" y="405" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587571853690">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="756" y="405" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1587571853690" />
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585234321931">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -101,34 +168,42 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585232431315" />
-    <state x="714" y="235" key="DetectedRootsChooserDialog" timestamp="1585741517738">
+    <state x="714" y="235" key="DetectedRootsChooserDialog" timestamp="1587040412490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="714" y="235" key="DetectedRootsChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585741517738" />
-    <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1585743664670">
+    <state x="714" y="235" key="DetectedRootsChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587040412490" />
+    <state x="758" y="222" key="ExecutionTargetDialog" timestamp="1587576132189">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585743664670" />
-    <state width="1877" height="259" key="GridCell.Tab.0.bottom" timestamp="1585745572385">
+    <state x="758" y="222" key="ExecutionTargetDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587576132189" />
+    <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1587576116964">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="259" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585745572385" />
-    <state width="1877" height="259" key="GridCell.Tab.0.center" timestamp="1585745572384">
+    <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1587576116964" />
+    <state width="1877" height="248" key="GridCell.Tab.0.bottom" timestamp="1587640185163">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="259" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585745572384" />
-    <state width="1877" height="259" key="GridCell.Tab.0.left" timestamp="1585745572384">
+    <state width="1877" height="248" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587640185163" />
+    <state width="1877" height="248" key="GridCell.Tab.0.center" timestamp="1587640185163">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="259" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585745572384" />
-    <state width="1877" height="259" key="GridCell.Tab.0.right" timestamp="1585745572384">
+    <state width="1877" height="248" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587640185163" />
+    <state width="1877" height="248" key="GridCell.Tab.0.left" timestamp="1587640185163">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="259" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585745572384" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1585741526852">
+    <state width="1877" height="248" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587640185163" />
+    <state width="1877" height="248" key="GridCell.Tab.0.right" timestamp="1587640185163">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585741526852" />
+    <state width="1877" height="248" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587640185163" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1587574872232">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1587574872232" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1587576122670">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587576122670" />
     <state x="92" y="92" width="1736" height="856" key="dock-window-1" timestamp="1585143952411">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -137,10 +212,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="342" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1585769590475" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1585229486407">
+    <state x="666" y="148" key="refactoring.ChangeSignatureDialog" timestamp="1587579183761">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585229486407" />
+    <state x="666" y="148" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587579183761" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1587632104032">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587632104032" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585745244162">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

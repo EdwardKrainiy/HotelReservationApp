@@ -64,7 +64,7 @@ public class CheckRequestService {
                             roomsDao.roomRewriting(rooms);
 
                             ClientsDAO clientsDao = new ClientsDAO();
-                            List<Client> clients =  clientsDao.clientReading();
+                            List<Client> clients = clientsDao.clientReading();
                             clients.get(i).setCost(clients.get(i).getCost() + cost_);
                             clientsDao.clientRewriting(clients);
                             System.out.println("Request was accepted! Cost: " + cost_);

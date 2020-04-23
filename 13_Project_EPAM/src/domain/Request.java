@@ -3,38 +3,22 @@ package domain;
 import java.util.Objects;
 
 public class Request {
-    private int requestId;
-    private int price;
     private int roomsAmount;
     private int comfortLevel;
+    private int requestId;
+    private int price;
     private int daysAmount;
 
-    public Request(int requestId, int price, int roomsAmount, int comfortLevel, int requiredAmountOfDays) {
-        this.requestId = requestId;
-        this.price = price;
+    public Request(int roomsAmount, int comfortLevel, int requestId, int price, int requiredAmountOfDays) {
         this.roomsAmount = roomsAmount;
         this.comfortLevel = comfortLevel;
+        this.requestId = requestId;
+        this.price = price;
         this.daysAmount = requiredAmountOfDays;
     }
 
     public Request(){
 
-    }
-
-    public int getRequestId() {
-        return requestId;
-    }
-
-    public void setRequestId(int requestId) {
-        this.requestId = requestId;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
     }
 
     public int getRoomsAmount() {
@@ -53,6 +37,22 @@ public class Request {
         this.comfortLevel = comfortLevel;
     }
 
+    public int getRequestId() {
+        return requestId;
+    }
+
+    public void setRequestId(int requestId) {
+        this.requestId = requestId;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
     public int getDaysAmount() {
         return daysAmount;
     }
@@ -68,14 +68,12 @@ public class Request {
         Request request = (Request) o;
         return requestId == request.requestId &&
                 price == request.price &&
-                roomsAmount == request.roomsAmount &&
-                comfortLevel == request.comfortLevel &&
                 daysAmount == request.daysAmount;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(requestId, price, roomsAmount, comfortLevel, daysAmount);
+        return Objects.hash(requestId, price, daysAmount);
     }
 
     @Override
@@ -83,8 +81,7 @@ public class Request {
         return "request{" +
                 "requestId=" + requestId +
                 ", price=" + price +
-                ", roomsAmount=" + roomsAmount +
-                ", comfortLevel=" + comfortLevel +
+                ", roomsAmount=" +
                 ", requiredAmountOfDays=" + daysAmount +
                 '}';
     }

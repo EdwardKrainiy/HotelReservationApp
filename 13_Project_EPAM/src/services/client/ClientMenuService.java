@@ -58,6 +58,8 @@ public class ClientMenuService {
         }
         else {
             for (int i = 0; i < requests.size(); i++) {
+                System.out.println(clients.get(number).getId());
+                System.out.println(requests.get(i).getRequestId());
                 if (clients.get(number).getId() == requests.get(i).getRequestId()) {
                     System.out.println("You already sent request!");
                     log.info("Request wasn't created, this client is already sent a request.");
@@ -76,10 +78,11 @@ public class ClientMenuService {
 
                     int price = 0;
                     int id = clients.get(number).getId();
-                    Request r1 = new Request(id, price, rooms, lvl, days);
+                    Request r1 = new Request(rooms, lvl, id, price, days);
                     log.info("Request was created.");
                     System.out.println("Request was added!");
                     requestsDAO.requestAdding(r1);
+                    break;
                 }
             }
         }
