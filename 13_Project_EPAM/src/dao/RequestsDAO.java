@@ -51,30 +51,23 @@ public class RequestsDAO{
         return requests;
     }
 
-    public void requestRewriting(List<Request> requests) throws IOException {
+    public void requestUpdating(Request request) throws IOException {
         try(Connection connection = ConnectionFactory.getConnection()){
             Statement statement = connection.createStatement();
-            statement.executeUpdate("delete from request");
-            for(int i = 0; i < requests.size(); i++) {
-                int roomsAmount = requests.get(i).getRoomsAmount();
-                int comfortLevel = requests.get(i).getComfortLevel();
-                int id = requests.get(i).getRequestId();
-                int price = requests.get(i).getPrice();
-                int daysAmount = requests.get(i).getDaysAmount();
-
-                PreparedStatement statement1 = connection.prepareStatement("insert into request values(?, ?, ?, ?, ?)");
-
-                statement1.setInt(1, roomsAmount);
-                statement1.setInt(2, comfortLevel);
-                statement1.setInt(3, id);
-                statement1.setInt(4, price);
-                statement1.setInt(5, daysAmount);
-                statement1.executeUpdate();
-
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
+            statement.executeQuery("update request set roomsAmount = request.roomsAmount, comfortLevel = request.comfortLevel, price = request.price, daysAmount = request.daysAmount where requestId = request.requestId");
+        } catch (SQLException ex) {
+            log.error("Request updating error!");
         }
-        log.info("Requests was changed.");
+        log.info("Request was changed.");
+    }
+
+    public void requestDeleting(Request request) throws IOException {
+        try(Connection connection = ConnectionFactory.getConnection()){
+            Statement statement = connection.createStatement();
+            statement.executeQuery("delete from request where requestId = request.requestId");
+        } catch (Exception e) {
+            log.error("Request deleting error!");
+        }
+        log.info("Request was deleted.");
     }
 }

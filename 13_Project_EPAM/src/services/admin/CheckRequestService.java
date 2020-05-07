@@ -54,26 +54,23 @@ public class CheckRequestService {
                             HotelRoomAddingUI roomAdding = new HotelRoomAddingUI();
                             int room = roomAdding.roomsEntering(sc, rooms.size());
                             int cost_ = requests.get(j).getComfortLevel() * requests.get(j).getDaysAmount() * requests.get(j).getRoomsAmount();
-                            requests.remove(i);
 
                             RequestsDAO requestsDao = new RequestsDAO();
-                            requestsDao.requestRewriting(requests);
-                            rooms.remove(room);
+                            requestsDao.requestDeleting(requests.get(i));
 
                             RoomsDAO roomsDao = new RoomsDAO();
-                            roomsDao.roomRewriting(rooms);
+                            roomsDao.roomDeleting(rooms.get(i));
 
                             ClientsDAO clientsDao = new ClientsDAO();
                             List<Client> clients = clientsDao.clientReading();
                             clients.get(i).setCost(clients.get(i).getCost() + cost_);
-                            clientsDao.clientRewriting(clients);
+                            clientsDao.clientUpdating(clients.get(i));
                             System.out.println("Request was accepted! Cost: " + cost_);
                             log.info("Accepted request number " + j);
                         }
                         if (var == 2) {
-                            requests.remove(i);
                             RequestsDAO requestsDAO = new RequestsDAO();
-                            requestsDAO.requestRewriting(requests);
+                            requestsDAO.requestDeleting(requests.get(i));
                             System.out.println("Request was deleted!");
                             log.info("Declined request number " + j);
                         }

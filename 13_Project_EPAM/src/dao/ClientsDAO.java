@@ -1,5 +1,6 @@
 package dao;
 
+import domain.Administrator;
 import domain.Client;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -67,33 +68,24 @@ public class ClientsDAO{
         return clients;
     }
 
-    public void clientRewriting(List<Client> clients) throws IOException {
+    public void clientUpdating(Client client) throws IOException {
         try(Connection connection = ConnectionFactory.getConnection()){
             Statement statement = connection.createStatement();
-            statement.executeUpdate("delete from client");
-            for(int i = 0; i < clients.size(); i++) {
-                String firstName = clients.get(i).getFirstName();
-                String secondName = clients.get(i).getSecondName();
-                int age = clients.get(i).getAge();
-                String login = clients.get(i).getLogin();
-                String password = clients.get(i).getPassword();
-                int cost = clients.get(i).getCost();
-                int id = clients.get(i).getId();
-
-                PreparedStatement statement1 = connection.prepareStatement("insert into client values(?, ?, ?, ?, ?, ?, ?)");
-
-                statement1.setString(1, firstName);
-                statement1.setString(2, secondName);
-                statement1.setInt(3, age);
-                statement1.setString(4, login);
-                statement1.setString(5, password);
-                statement1.setInt(6, cost);
-                statement1.setInt(7, id );
-                statement1.executeUpdate();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
+            statement.executeQuery("update client set firstName = client.firstName, secondName = client.secondName, age = client.age where login = client.login");
+        } catch (SQLException ex) {
+            log.error("Client updating error!");
         }
         log.info("Clients was changed.");
+    }
+
+    public void clientDeleting(String login){
+        try(Connection connection = ConnectionFactory.getConnection();
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("delete from  client where login = client.login");        )
+        {
+        } catch (Exception e) {
+            log.error("Client deleting error!");
+        }
+        log.info("Client was deleted.");
     }
 }

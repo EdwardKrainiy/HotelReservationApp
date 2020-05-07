@@ -47,24 +47,13 @@ public class RoomsDAO{
         return rooms;
     }
 
-    public void roomRewriting(List<Room> rooms) throws IOException {
+    public void roomDeleting(Room room) throws IOException {
         try(Connection connection = ConnectionFactory.getConnection()){
             Statement statement = connection.createStatement();
-            statement.executeUpdate("delete from room");
-            for(int i = 0; i < rooms.size(); i++) {
-                int roomsAmount = rooms.get(i).getRoomsAmount();
-                int comfortLevel = rooms.get(i).getComfortLevel();
-
-                PreparedStatement statement1 = connection.prepareStatement("insert into room values(?, ?)");
-
-                statement1.setInt(1, roomsAmount);
-                statement1.setInt(2, comfortLevel);
-                statement1.executeUpdate();
-
-            }
+            statement.executeQuery("delete from room where roomsAmount = room.roomsAmount && comfortLevel = room.comfortLevel");
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error("Room deleting error!");
         }
-        log.info("Rooms was changed.");
+        log.info("Room was deleted.");
     }
 }
