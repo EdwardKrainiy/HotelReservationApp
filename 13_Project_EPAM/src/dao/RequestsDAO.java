@@ -37,9 +37,9 @@ public class RequestsDAO{
 
     public List requestReading() throws IOException {
         List<Request> requests = new ArrayList<Request>();
-        try(Connection connection = ConnectionFactory.getConnection()){
+        try(Connection connection = ConnectionFactory.getConnection();
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("select * from request");
+            ResultSet resultSet = statement.executeQuery("select * from request");){
             while(resultSet.next()){
                 Request r = new Request(resultSet.getInt(1), resultSet.getInt(2), resultSet.getInt(3), resultSet.getInt(4), resultSet.getInt(5));
                 requests.add(r);
@@ -52,8 +52,9 @@ public class RequestsDAO{
     }
 
     public void requestUpdating(Request request) throws IOException {
-        try(Connection connection = ConnectionFactory.getConnection()){
-            Statement statement = connection.createStatement();
+        try(Connection connection = ConnectionFactory.getConnection();
+            Statement statement = connection.createStatement();)
+        {
             statement.executeQuery("update request set roomsAmount = request.roomsAmount, comfortLevel = request.comfortLevel, price = request.price, daysAmount = request.daysAmount where requestId = request.requestId");
         } catch (SQLException ex) {
             log.error("Request updating error!");

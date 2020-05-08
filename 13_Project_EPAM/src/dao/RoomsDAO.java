@@ -19,12 +19,12 @@ public class RoomsDAO{
         int comfortLevel = r1.getComfortLevel();
         int roomsAmount = r1.getRoomsAmount();
 
-        try(Connection connection = ConnectionFactory.getConnection()) {
+        try(Connection connection = ConnectionFactory.getConnection();
             PreparedStatement statement1  = connection.prepareStatement("insert into room values(?, ?)");
+        ) {
             statement1.setInt(1, roomsAmount);
             statement1.setInt(2, comfortLevel);
             statement1.executeUpdate();
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -33,9 +33,10 @@ public class RoomsDAO{
 
     public List roomReading() throws IOException {
         List<Room> rooms = new ArrayList<Room>();
-        try(Connection connection = ConnectionFactory.getConnection()){
+        try(Connection connection = ConnectionFactory.getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("select * from room");
+        ){
             while(resultSet.next()){
                 Room r = new Room(resultSet.getInt(1), resultSet.getInt(2));
                 rooms.add(r);
@@ -48,8 +49,9 @@ public class RoomsDAO{
     }
 
     public void roomDeleting(Room room) throws IOException {
-        try(Connection connection = ConnectionFactory.getConnection()){
+        try(Connection connection = ConnectionFactory.getConnection();
             Statement statement = connection.createStatement();
+        ){
             statement.executeQuery("delete from room where roomsAmount = room.roomsAmount && comfortLevel = room.comfortLevel");
         } catch (Exception e) {
             log.error("Room deleting error!");

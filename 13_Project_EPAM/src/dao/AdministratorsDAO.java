@@ -34,7 +34,6 @@ final static Logger log = LogManager.getLogger(AdministratorsDAO.class);
         } else
             try(Connection connection = ConnectionFactory.getConnection()) {
             PreparedStatement statement1 = connection.prepareStatement("insert into administrator(firstName, secondName, age, login, password) values(?, ?, ?, ?, ?)");
-
             statement1.setString(1, firstName);
             statement1.setString(2, secondName);
             statement1.setInt(3, age);
@@ -53,8 +52,7 @@ final static Logger log = LogManager.getLogger(AdministratorsDAO.class);
         try(Connection connection = ConnectionFactory.getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("select firstName, secondName, age, login, password from administrator");
-            )
-        {
+        ){
             while(resultSet.next()){
                 Administrator a = new Administrator(resultSet.getString(1), resultSet.getString(2), resultSet.getInt(3), resultSet.getString(4), resultSet.getString(5));
                 administrators.add(a);
@@ -70,8 +68,7 @@ final static Logger log = LogManager.getLogger(AdministratorsDAO.class);
         try(Connection connection = ConnectionFactory.getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("update administrator set firstName = administrator.firstName, secondName = administrator.secondName, age = administrator.age where login = administrator.login");
-        )
-        {
+        ){
         } catch (Exception e) {
             log.error("Admin updating error!");
         }
@@ -79,11 +76,9 @@ final static Logger log = LogManager.getLogger(AdministratorsDAO.class);
     }
 
     public void adminDeleting(Administrator administrator){
-        try(Connection connection = ConnectionFactory.getConnection();
+        try(Connection connection = ConnectionFactory.getConnection()){
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("delete from  administrator where login = administrator.login");
-        )
-        {
         } catch (Exception e) {
             log.error("Admin deleting error!");
         }

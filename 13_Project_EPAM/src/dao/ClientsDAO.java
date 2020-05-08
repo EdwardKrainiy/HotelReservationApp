@@ -54,9 +54,10 @@ public class ClientsDAO{
 
     public List clientReading() throws IOException {
         List<Client> clients = new ArrayList<Client>();
-        try(Connection connection = ConnectionFactory.getConnection()){
+        try(Connection connection = ConnectionFactory.getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("select * from client");
+        ){
             while(resultSet.next()){
                 Client c = new Client(resultSet.getString(1), resultSet.getString(2), resultSet.getInt(3), resultSet.getString(4), resultSet.getString(5), resultSet.getInt(6), resultSet.getInt(7));
                 clients.add(c);
@@ -69,8 +70,8 @@ public class ClientsDAO{
     }
 
     public void clientUpdating(Client client) throws IOException {
-        try(Connection connection = ConnectionFactory.getConnection()){
-            Statement statement = connection.createStatement();
+        try(Connection connection = ConnectionFactory.getConnection();
+            Statement statement = connection.createStatement();){
             statement.executeQuery("update client set firstName = client.firstName, secondName = client.secondName, age = client.age where login = client.login");
         } catch (SQLException ex) {
             log.error("Client updating error!");
@@ -80,9 +81,8 @@ public class ClientsDAO{
 
     public void clientDeleting(String login){
         try(Connection connection = ConnectionFactory.getConnection();
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("delete from  client where login = client.login");        )
-        {
+            Statement statement = connection.createStatement();){
+            ResultSet resultSet = statement.executeQuery("delete from  client where login = client.login");
         } catch (Exception e) {
             log.error("Client deleting error!");
         }

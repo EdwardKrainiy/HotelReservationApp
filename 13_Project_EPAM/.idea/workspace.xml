@@ -6,8 +6,6 @@
       <change beforePath="$PROJECT_DIR$/src/dao/AdministratorsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/AdministratorsDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/ClientsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ClientsDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/RequestsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/RequestsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/RoomsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/RoomsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/admin/CheckRequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/admin/CheckRequestService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +132,7 @@
       <workItem from="1587802591108" duration="32000" />
       <workItem from="1588153289414" duration="3977000" />
       <workItem from="1588850548215" duration="7562000" />
+      <workItem from="1588932608211" duration="442000" />
     </task>
     <servers />
   </component>
