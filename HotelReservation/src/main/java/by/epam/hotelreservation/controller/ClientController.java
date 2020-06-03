@@ -100,7 +100,7 @@ public class ClientController {
         ArrayList<Client> clients = clientsDAO.clientReading();
         for(int i = 0; i < clients.size(); i++) {
             if (clients.get(i).getLogin().equals(login)) {
-                clientsDAO.clientDeleting(login);
+                clientsDAO.clientDeleting(clients.get(i));
             }
         }
         return new ResponseEntity<>("Delete Success", HttpStatus.OK);

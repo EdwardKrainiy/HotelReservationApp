@@ -1,9 +1,19 @@
 package by.epam.hotelreservation.domain;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
+@Table(name = "room")
 public class Room {
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private int id;
+
+    @Column(name = "roomsAmount")
     private int roomsAmount;
+
+    @Column(name = "comfortLevel")
     private int comfortLevel;
 
     public Room(int roomsAmount, int comfortLevel){
@@ -12,6 +22,14 @@ public class Room {
     }
 
     public Room(){
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getRoomsAmount() {

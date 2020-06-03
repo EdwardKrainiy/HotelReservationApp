@@ -1,27 +1,94 @@
 package by.epam.hotelreservation.domain;
 
-import java.util.Objects;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-public class Client extends Entity {
+@Entity
+@Table(name = "client")
+public class Client {
+    @Column(name = "firstName")
+    private String firstName;
+
+    @Column(name = "secondName")
+    private String secondName;
+
+    @Column(name = "age")
+    private int age;
+
+    @Id
+    @Column(name = "login")
+    private String login;
+
+    @Column(name = "password")
+    private String password;
+
+    @Column(name = "cost")
     private int cost;
+
+    @Column(name = "requestId")
     private int id;
 
     public Client(String firstName, String secondName, int age, String login, String password, int cost, int id) {
-        super(firstName, secondName, age, login, password);
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.age = age;
+        this.login = login;
+        this.password = password;
         this.cost = cost;
         this.id = id;
     }
 
-    public void setCost(int cost) {
-        this.cost = cost;
+    public Client() {
     }
 
-    public Client(){
-        super();
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getSecondName() {
+        return secondName;
+    }
+
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public int getCost() {
         return cost;
+    }
+
+    public void setCost(int cost) {
+        this.cost = cost;
     }
 
     public int getId() {
@@ -30,28 +97,5 @@ public class Client extends Entity {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
-        Client client = (Client) o;
-        return cost == client.cost &&
-                id == client.id;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), cost, id);
-    }
-
-    @Override
-    public String toString() {
-        return "client{" +
-                "cost=" + cost +
-                ", requestId=" + id +
-                '}';
     }
 }

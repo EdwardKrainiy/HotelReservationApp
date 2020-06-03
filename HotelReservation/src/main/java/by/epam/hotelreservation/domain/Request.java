@@ -1,12 +1,26 @@
 package by.epam.hotelreservation.domain;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
+@Table(name = "request")
 public class Request {
+    @Column(name = "roomsAmount")
     private int roomsAmount;
+
+    @Column(name = "comfortLevel")
     private int comfortLevel;
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name = "requestId")
     private int requestId;
+
+    @Column(name = "price")
     private int price;
+
+    @Column(name = "daysAmount")
     private int daysAmount;
 
     public Request(int roomsAmount, int comfortLevel, int requestId, int price, int requiredAmountOfDays) {
@@ -18,7 +32,6 @@ public class Request {
     }
 
     public Request(){
-
     }
 
     public int getRoomsAmount() {

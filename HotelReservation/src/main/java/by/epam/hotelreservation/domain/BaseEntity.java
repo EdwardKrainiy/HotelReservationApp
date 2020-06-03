@@ -1,15 +1,27 @@
 package by.epam.hotelreservation.domain;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
 import java.util.Objects;
 
-public class Entity {
+public class BaseEntity {
+    @Column(name = "firstName")
     private String firstName;
+
+    @Column(name = "secondName")
     private String secondName;
+
+    @Column(name = "age")
     private int age;
+
+    @Id
+    @Column(name = "login")
     private String login;
+
+    @Column(name = "password")
     private String password;
 
-    public Entity(String firstName, String secondName, int age, String login, String password) {
+    public BaseEntity(String firstName, String secondName, int age, String login, String password) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.age = age;
@@ -17,12 +29,7 @@ public class Entity {
         this.password = password;
     }
 
-    public Entity(){
-        this.firstName = "";
-        this.secondName = "";
-        this.age = -1;
-        this.login = "";
-        this.password = "";
+    public BaseEntity(){
     }
 
     public String getFirstName() {
@@ -69,12 +76,12 @@ public class Entity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Entity entity = (Entity) o;
-        return age == entity.age &&
-                Objects.equals(firstName, entity.firstName) &&
-                Objects.equals(secondName, entity.secondName) &&
-                Objects.equals(login, entity.login) &&
-                Objects.equals(password, entity.password);
+        BaseEntity baseEntity = (BaseEntity) o;
+        return age == baseEntity.age &&
+                Objects.equals(firstName, baseEntity.firstName) &&
+                Objects.equals(secondName, baseEntity.secondName) &&
+                Objects.equals(login, baseEntity.login) &&
+                Objects.equals(password, baseEntity.password);
     }
 
     @Override

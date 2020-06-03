@@ -96,7 +96,7 @@ public class AdminController {
         ArrayList<Administrator> administrators = administratorsDAO.adminReading();
         for(int i = 0; i < administrators.size(); i++) {
             if (administrators.get(i).getLogin().equals(login)) {
-                administratorsDAO.adminDeleting(login);
+                administratorsDAO.adminDeleting(administrators.get(i));
             }
         }
         return new ResponseEntity<>("Delete Success", HttpStatus.OK);

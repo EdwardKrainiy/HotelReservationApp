@@ -102,7 +102,7 @@ public class RequestController {
         ArrayList<Request> requests = requestsDAO.requestReading();
         for(int i = 0; i < requests.size(); i++) {
             if (requests.get(i).getRequestId() == requestId) {
-                requestsDAO.requestDeleting(requestId);
+                requestsDAO.requestDeleting(requests.get(i));
             }
         }
         return new ResponseEntity<>("Delete Success", HttpStatus.OK);
