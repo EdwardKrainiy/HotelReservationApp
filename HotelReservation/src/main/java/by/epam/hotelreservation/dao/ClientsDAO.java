@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
 public class ClientsDAO{
 
     final static Logger log = LogManager.getLogger(ClientsDAO.class);
@@ -44,7 +43,6 @@ public class ClientsDAO{
                 statement1.setInt(6, cost);
                 statement1.setInt(7, id);
                 statement1.executeUpdate();
-
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -68,10 +66,40 @@ public class ClientsDAO{
         return clients;
     }
 
-    public void clientUpdating(Client client) throws IOException {
+    public Client clientReading(String relogin){
+        Client client = new Client();
+        try(Connection connection = ConnectionFactory.getConnection();
+            Statement statement = connection.createStatement();
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM client where login = ?");
+        ) {
+            preparedStatement.setString(1, relogin);
+            ResultSet result2 = preparedStatement.executeQuery();
+
+            while(result2.next()) {
+                client.setFirstName(result2.getString(1));
+                client.setSecondName(result2.getString(2));
+                client.setAge(result2.getInt(3));
+                client.setLogin(result2.getString(4));
+                client.setPassword(result2.getString(5));
+                client.setCost(result2.getInt(6));
+                client.setId(result2.getInt(7));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        log.info("Client with login " + relogin + " was obtained.");
+        return client;
+    }
+
+    public void clientUpdating(Client client1) throws IOException {
         try(Connection connection = ConnectionFactory.getConnection();
             Statement statement = connection.createStatement();){
-            statement.executeQuery("update client set firstName = client.firstName, secondName = client.secondName, age = client.age where login = client.login");
+            PreparedStatement preparedStatement = connection.prepareStatement("update client set firstName = ?, secondName = ?, age = ? where login = ?");
+            preparedStatement.setString(1, client1.getFirstName());
+            preparedStatement.setString(2, client1.getSecondName());
+            preparedStatement.setInt(3, client1.getAge());
+            preparedStatement.setString(4, client1.getLogin());
+            preparedStatement.executeUpdate();
         } catch (SQLException ex) {
             log.error("Client updating error!");
         }
@@ -81,7 +109,9 @@ public class ClientsDAO{
     public void clientDeleting(String login){
         try(Connection connection = ConnectionFactory.getConnection();
             Statement statement = connection.createStatement();){
-            ResultSet resultSet = statement.executeQuery("delete from  client where login = client.login");
+            PreparedStatement preparedStatement = connection.prepareStatement("delete from  client where login = ?");
+            preparedStatement.setString(1, login);
+            preparedStatement.executeUpdate();
         } catch (Exception e) {
             log.error("Client deleting error!");
         }

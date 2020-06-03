@@ -2,6 +2,7 @@ package by.epam.hotelreservation.dao;
 
 
 import by.epam.hotelreservation.domain.Administrator;
+import by.epam.hotelreservation.domain.Client;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -48,8 +49,8 @@ final static Logger log = LogManager.getLogger(AdministratorsDAO.class);
         log.info("Administrator was added.");
     }
 
-    public List<Administrator> adminReading() {
-        List<Administrator> administrators = new ArrayList<Administrator>();
+    public ArrayList<Administrator> adminReading() throws IOException {
+        ArrayList<Administrator> administrators = new ArrayList<Administrator>();
         try(Connection connection = ConnectionFactory.getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("select firstName, secondName, age, login, password from administrator");
@@ -65,21 +66,48 @@ final static Logger log = LogManager.getLogger(AdministratorsDAO.class);
         return administrators;
     }
 
-    public void adminUpdating(Administrator administrator){
+    public Administrator adminReading(String relogin){
+        Administrator administrator = new Administrator();
         try(Connection connection = ConnectionFactory.getConnection();
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("update administrator set firstName = administrator.firstName, secondName = administrator.secondName, age = administrator.age where login = administrator.login");
-        ){
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM administrator where login = ?");
+        ) {
+            preparedStatement.setString(1, relogin);
+            ResultSet result2 = preparedStatement.executeQuery();
+
+            while(result2.next()) {
+                administrator.setFirstName(result2.getString(1));
+                administrator.setSecondName(result2.getString(2));
+                administrator.setAge(result2.getInt(3));
+                administrator.setLogin(result2.getString(4));
+                administrator.setPassword(result2.getString(5));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        log.info("Admin with login " + relogin + " was obtained.");
+        return administrator;
+    }
+
+    public void adminUpdating(Administrator administrator) throws IOException{
+        try(Connection connection = ConnectionFactory.getConnection();){
+            PreparedStatement preparedStatement = connection.prepareStatement("update administrator set firstName = ?, secondName = ?, age = ? where login = ?");
+            preparedStatement.setString(1, administrator.getFirstName());
+            preparedStatement.setString(2, administrator.getSecondName());
+            preparedStatement.setInt(3, administrator.getAge());
+            preparedStatement.executeUpdate();
         } catch (Exception e) {
             log.error("Admin updating error!");
         }
         log.info("Administrators was obtained.");
     }
 
-    public void adminDeleting(Administrator administrator){
-        try(Connection connection = ConnectionFactory.getConnection()){
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("delete from  administrator where login = administrator.login");
+    public void adminDeleting(String login){
+        try(Connection connection = ConnectionFactory.getConnection();
+            Statement statement = connection.createStatement();){
+            PreparedStatement preparedStatement = connection.prepareStatement("delete from  administrator where login = ?");
+            preparedStatement.setString(1, login);
+            preparedStatement.executeUpdate();
         } catch (Exception e) {
             log.error("Admin deleting error!");
         }
